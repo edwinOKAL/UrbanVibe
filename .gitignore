@@ -1,0 +1,24 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+
+# KML file fiber location
+*.kml
+
+# Excel observation files
+*.xlsx
+*.xls
+
+# Local filter config (user-specific)
+data/obs_filter.toml
+
+# Shapefile outputs (all sidecar files)
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+*.qpj
+*.sbn
+*.sbx

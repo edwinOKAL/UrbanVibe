@@ -1,0 +1,28 @@
+[project]
+authors = [{name = "Roeland Nieboer", email = "roeland.nieboer@deltares.nl"}]
+dependencies = []
+name = "UrbanVibe"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+urbanvibe = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+obs_filter = { cmd = "python data/obs_filter.py", description = "Filter observations by bbox & time, export shapefile, show QC plot" }
+
+[tool.pixi.dependencies]
+python = ">=3.14.6,<3.15"
+pandas = ">=3.0.3,<4"
+openpyxl = ">=3.1.5,<4"
+geopandas = ">=1.1.4,<2"
+matplotlib = ">=3.11.0,<4"
+contextily = ">=1.7.1,<2"

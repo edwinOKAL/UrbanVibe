@@ -11,7 +11,10 @@
 *.xls
 
 # Local filter config (user-specific)
-data/obs_filter.toml
+# data/obs_filter.toml
+
+# Python bytecode
+data/__pycache__/
 
 # Shapefile outputs (all sidecar files)
 *.shp

@@ -1,0 +1,41 @@
+# obs_filter.toml
+# Edit the values below, then re-run:  pixi run obs_filter
+# Set a value to "" (empty string) to use the full data extent.
+
+[output]
+# Output shapefile name (written to data/). Change to avoid overwrite.
+filename = "Area_all_Window_allebn_Type_all.shp"
+
+[bbox]
+# Coordinates in EPSG 28992 (RD New / Amersfoort) – metres
+#x_min = 123500.0
+#x_max = 126000.0
+#y_min = 479000.0
+#y_max = 483000.0
+
+[time]
+# ISO-8601 format: "YYYY-MM-DD" or "YYYY-MM-DD HH:MM:SS"
+#start = "2025-10-16 00:00:00"
+#end   = "2025-11-30 00:00:00"
+
+[attributes]
+# Optional attribute filters. Use "" to disable a filter.
+# Descriptor can be a single value or a list.
+# Available Descriptor values in Obs_log_full_3D.xlsx:
+# Airgun, DSP, DSP-SPS, SP, SPS, SPS_HU, SP_HU, VP, WSP
+#descriptor = "VP"
+
+## descriptor = ["SP", "SPS", "SPS_HU", "SP_HU"]
+
+
+# loaded_depth supports:
+# - exact value: 12.5
+# - single comparison: ">10", ">=10", "<20", "<=20"
+# loaded_depth = 12.5
+# loaded_depth = ">=10"
+loaded_depth = ""
+
+# loaded_charge supports the same selector syntax as loaded_depth.
+# loaded_charge = 35
+# loaded_charge = "<=35"
+loaded_charge = ""

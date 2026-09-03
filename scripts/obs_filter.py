@@ -1,5 +1,3 @@
-"""Legacy compatibility wrapper for the obs_filter workflow."""
-
 from urbanvibe.cli import main
 
 

@@ -10,6 +10,9 @@
 *.xlsx
 *.xls
 
+# notebooks
+*.ipynb
+
 # Local filter config (user-specific)
 # data/obs_filter.toml
 
